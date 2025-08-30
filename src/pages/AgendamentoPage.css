@@ -1,0 +1,226 @@
+/* Container principal do agendamento */
+.agendamento-boxxxx {
+  background: #fff;
+  border: 2px solid #e60023;
+  border-radius: 12px;
+  max-width: 520px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  box-shadow: 0 6px 20px rgba(230, 0, 35, 0.15);
+  font-family: 'Inter', sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.agendamento-boxxxx:hover {
+  box-shadow: 0 8px 30px rgba(230, 0, 35, 0.2);
+}
+
+.agendamento-boxxxx h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e60023;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Wrapper flex para alinhar DatePicker, React-Select e botão */
+.agendamento-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Em telas pequenas, quebra para nova linha */
+  margin-bottom: 1.25rem;
+}
+
+/* DatePicker estilizado (campo fechado) */
+.datepickerxxx {
+  flex: 1 1 150px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.datepickerxxx:focus {
+  border-color: #b3001b;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.15);
+}
+
+/* React-Select prefixado para .react-select-* */
+.react-select__control {
+  flex: 1 1 150px;
+  border: 2px solid #ccc !important;
+  min-height: 44px;
+  border-radius: 8px;
+  background: #f9f9f9 !important;
+  box-shadow: none !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.react-select__control--is-focused {
+  border-color: #b3001b !important;
+  box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.15) !important;
+}
+
+.react-select__placeholder {
+  color: #888 !important;
+  font-size: 1rem;
+}
+
+.react-select__single-value {
+  color: #333 !important;
+  font-size: 1rem;
+}
+
+.react-select__dropdown-indicator {
+  color: #888 !important;
+  transition: color 0.2s ease;
+}
+
+.react-select__dropdown-indicator:hover {
+  color: #b3001b !important;
+}
+
+.react-select__menu {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(230, 0, 35, 0.15) !important;
+  margin-top: 4px !important;
+}
+
+.react-select__menu-list {
+  max-height: 180px !important;
+  padding: 0 !important;
+}
+
+.react-select__option {
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  color: #333 !important;
+  cursor: pointer !important;
+}
+
+.react-select__option--is-focused {
+  background-color: rgba(230, 0, 35, 0.1) !important;
+}
+
+.react-select__option--is-selected {
+  background-color: rgba(230, 0, 35, 0.2) !important;
+  color: #000 !important;
+}
+
+/* Botão Agendar */
+.btn-agendarxxx {
+  flex: 0 0 auto;
+  padding: 0.85rem 1.2rem;
+  background: linear-gradient(135deg, #e60023, #ff1a44);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(230, 0, 35, 0.2);
+}
+
+.btn-agendarxxx:hover {
+  background: linear-gradient(135deg, #ff1a44, #e60023);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(230, 0, 35, 0.3);
+}
+
+/* Mensagens de erro/sucesso */
+.mensagemxxx {
+  margin-top: 1.25rem;
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: fadeIn 0.35s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mensagemxxx.sucesso {
+  background-color: #e8f6ec;
+  color: #1a6f3d;
+  border-left: 4px solid #1a6f3d;
+}
+
+.mensagemxxx.erro {
+  background-color: #ffe8e9;
+  color: #7a1619;
+  border-left: 4px solid #7a1619;
+}
+
+/* Lista de agendamentos */
+.agendamentos-listaxxx {
+  margin-top: 2rem;
+}
+
+.agendamentos-listaxxx h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-left: 4px solid #e60023;
+  padding-left: 0.75rem;
+  background: linear-gradient(to right, #fff, #f5f5f5);
+  border-radius: 4px;
+}
+
+.agendamentos-listaxxx ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agendamentos-listaxxx li {
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agendamentos-listaxxx li:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(230, 0, 35, 0.1);
+}
+
+.agendamentos-listaxxx li span {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+.btn-cancelarxxx {
+  background: #e63946;
+  color: #fff;
+  padding: 0.45rem 0.85rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(230, 0, 35, 0.15);
+}
+
+.btn-cancelarxxx:hover {
+  background: #d62828;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(230, 0, 35, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

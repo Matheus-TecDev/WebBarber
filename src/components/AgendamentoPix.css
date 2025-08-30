@@ -1,0 +1,89 @@
+.pix-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.pix-box {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(204, 0, 0, 0.3), 0 0 35px rgba(153, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 460px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.pix-box:hover {
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.5), 0 0 45px rgba(153, 0, 0, 0.35);
+}
+
+.pix-box h3 {
+  color: #cc0000;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.pix-input-wrapper {
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.pix-key {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  background: #f9f9f9;
+  color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #cc0000, #e60000);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.4);
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transform: scale(1.03);
+}
+
+.pix-hint {
+  font-size: 0.75rem;
+  color: #444;
+  text-align: center;
+  max-width: 90%;
+}
+
+.copied-msg {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 0.9rem;
+  animation: fadeInOut 2s ease-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}

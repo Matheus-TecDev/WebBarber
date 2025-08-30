@@ -1,0 +1,103 @@
+/* Login.css */
+
+.login-container {
+  max-width: 600px;              /* Mesma largura do cadastro */
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2.5rem 2.5rem;        /* Mesmo padding do cadastro */
+  border-radius: 16px;
+  box-shadow: 
+    0 0 25px rgba(204, 0, 0, 0.4),
+    0 0 40px rgba(153, 0, 0, 0.3);
+  font-family: 'Inter', sans-serif;
+  transition: box-shadow 0.4s ease;
+  box-sizing: border-box;
+}
+
+.login-container:hover {
+  box-shadow: 
+    0 0 35px rgba(204, 0, 0, 0.6),
+    0 0 60px rgba(153, 0, 0, 0.5);
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #cc0000;
+  margin-bottom: 2rem; 
+  font-weight: 700;
+  font-size: 2rem;     /* Tamanho igual ao cadastro */
+}
+
+/* Estilização dos campos de input */
+.login-container input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;   /* Mesmo padding que no cadastro */
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #111;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+
+  /* Placeholder alinhado à esquerda */
+  text-align: left;
+}
+
+.login-container input::placeholder {
+  color: #999;
+  text-align: left;
+}
+
+.login-container input:focus {
+  border-color: #cc0000;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
+}
+
+/* Botão de Entrar */
+.login-container button {
+  width: 100%;
+  background: linear-gradient(135deg, #cc0000, #e60000);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+}
+
+.login-container button:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transform: translateY(-2px);
+}
+
+/* Links abaixo do botão */
+.login-links {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.login-links a {
+  color: #cc0000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.erro {
+  color: #e63946;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,93 @@
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 18%;
+    border-bottom-right-radius: 75%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0 0px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Para sobrepor outros elementos */
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .sidebar button {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .sidebar button:hover {
+    background-color: #444;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #ff5c5c;
+  }
+
+
+  @media (max-width: 1050px){
+    .sidebar{
+      width: 250px;
+      height: 200px;
+      border-bottom-right-radius: 65%;
+    }
+  }
+
+  @media (max-width: 686px){
+    .sidebar{
+      width: 200px;
+      height: 200px;
+    }
+    .sidebar button{
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px){
+    .sidebar{
+      height: 165px;
+    }
+  }

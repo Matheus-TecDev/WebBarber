@@ -1,0 +1,209 @@
+/* Overlay escuro que cobre tudo */
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Container do modal */
+.confirm-box {
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 560px;
+  max-height: 75vh;
+  overflow-y: auto;
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.4), 0 0 40px rgba(153, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  scrollbar-width: thin;
+}
+
+.confirm-box:hover {
+  box-shadow: 0 0 35px rgba(204, 0, 0, 0.6), 0 0 60px rgba(153, 0, 0, 0.5);
+}
+
+/* Botão “✖” no canto superior direito */
+.fechar-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #cc0000;
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.fechar-modal:hover {
+  color: #a10000;
+  transform: scale(1.1);
+}
+
+/* Título do modal */
+.confirm-box h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #cc0000;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Conteúdo do formulário */
+.editar-container {
+  font-family: 'Inter', sans-serif;
+}
+
+.editar-container input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  color: #111;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.editar-container input:focus {
+  border-color: #cc0000;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
+}
+
+.editar-container input:disabled {
+  background-color: #f5f5f5;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.editar-container hr {
+  margin: 2rem 0 1rem;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.editar-container h4 {
+  text-align: center;
+  font-weight: 600;
+  color: #cc0000;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Botão principal */
+.editar-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #cc0000, #e60000);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.4);
+}
+
+.editar-container button:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transform: translateY(-2px);
+}
+
+/* Mensagem de status */
+.mensagem {
+  color: #a10000;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Botões de confirmação (Sim / Não) */
+.confirm-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.confirm-buttons button {
+  flex: 1;
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Botão “Não” */
+.btn-nao {
+  background-color: #ddd;
+  color: #111;
+}
+
+.btn-nao:hover {
+  background-color: #bbb;
+  transform: translateY(-1px);
+}
+
+/* Botão “Sim” */
+.btn-sim {
+  background: linear-gradient(135deg, #cc0000, #e60000);
+  color: #fff;
+}
+
+.btn-sim:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transform: translateY(-1px);
+}
+
+/* Animação suave para mensagens */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar moderna para WebKit (Chrome, Edge, Opera, etc) */
+.confirm-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.confirm-box::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.confirm-box::-webkit-scrollbar-thumb {
+  background-color: #cc0000;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+.confirm-box::-webkit-scrollbar-thumb:hover {
+  background-color: #a10000;
+}
+
+/* Firefox */
+.confirm-box {
+  scrollbar-width: thin;
+  scrollbar-color: #cc0000 #f0f0f0;
+}

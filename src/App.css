@@ -1,0 +1,18 @@
+.App {
+  background-color: #f4f4f4; /* Cor do fundo reto */
+  min-height: 100vh; /* Ocupa toda a altura da janela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px; /* Limita a largura do conteúdo principal */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white; /* Fundo branco para o conteúdo principal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+  border-radius: 8px; /* Borda arredondada no conteúdo */
+}
+

@@ -1,0 +1,133 @@
+.Footer {
+  background-color: #fefefe;
+  color: #fff;
+  box-shadow: 20px -1px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.redes-sociaissss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-buttons-containerrrr {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botões das redes sociais sem fundo fixo */
+.social-buttonfacebookkk,
+.social-buttoninstagrammmm,
+.social-buttonyoutubeeee,
+.social-buttontiktokkk,
+.social-buttonwhatsappppp {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0px 4px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Imagens específicas */
+.social-buttonfacebookkk {
+  background-image: url('../images/Facebook.svg');
+}
+.social-buttoninstagrammmm {
+  background-image: url('../images/Instagram.jpeg');
+}
+.social-buttonyoutubeeee {
+  background-image: url('../images/youtube.jpg');
+}
+.social-buttontiktokkk {
+  background-image: url('../images/ttk.jpg');
+}
+.social-buttonwhatsappppp {
+  background-image: url('../images/whatsapp.png');
+}
+
+/* Hover apenas com animação */
+.social-buttonfacebookkk:hover,
+.social-buttoninstagrammmm:hover,
+.social-buttonyoutubeeee:hover,
+.social-buttontiktokkk:hover,
+.social-buttonwhatsappppp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* WhatsApp seção */
+.whatssss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.textwppppp {
+  font-size: 20px;
+  color: black;
+  margin-right: 8px;
+}
+
+.contatoooo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 3px;
+}
+
+.redessss {
+  font-size: 20px;
+  color: black;
+}
+
+.endddd {
+  font-size: 24px;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.conteiner-ariii {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteiner-ariii h2,
+.conteiner-ariii h3 {
+  margin-bottom: 3px;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .redes-sociaissss {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-buttons-containerrrr {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 611px) {
+  .Footer {
+    min-width: 626px;
+    padding: 0;
+  }
+}
