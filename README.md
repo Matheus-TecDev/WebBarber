@@ -1,4 +1,4 @@
-# 🧩 WebBarber
+## 💈 WebBarber
 
 ## 📖 Descrição
 
